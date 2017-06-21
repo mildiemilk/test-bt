@@ -1,6 +1,11 @@
 import { actionTypes as types, urls } from '../constants'
 import { post } from '../helpers'
 
+export const loading = l => dispatch => {
+  console.log('should displatch something')
+  dispatch({ type: 'APP_LOADING', l })
+}
+
 export const signup = ({ email, password }) => dispatch => {
   dispatch({ type: types.SIGNUP_REQUEST })
   post({

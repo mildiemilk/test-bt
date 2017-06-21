@@ -20,7 +20,7 @@ const Signup = ({ user, signup }) => {
       <FormTitle>Sign up</FormTitle>
       <Form onSubmit={handleSubmit} />
       <FooterLink to="/login">Already have an account ?</FooterLink>
-      {user.token && <Redirect to="/" />}
+
     </div>
   )
 }

@@ -2,11 +2,11 @@ import React from 'react'
 
 import { Title } from '../Styled'
 import Github from './Github'
-
+import Nav from './Nav'
 const Header = () => (
   <div>
-    <Title>redux-react-starter</Title>
-    <Github />
+    <Nav />
+    <Title>Benefitable</Title>
   </div>
 )
 
