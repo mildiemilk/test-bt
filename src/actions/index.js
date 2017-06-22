@@ -6,6 +6,23 @@ export const loading = l => dispatch => {
   dispatch({ type: 'APP_LOADING', l })
 }
 
+export const companyCount = cCount => dispatch => {
+  dispatch({ type: 'COMPANY_COUNT', count: cCount })
+}
+
+export const companyDiscount = cCount => dispatch => {
+  dispatch({ type: 'COMPANY_DISCOUNT', count: cCount })
+}
+
+export const companyFill = com => dispatch => {
+  dispatch({ type: 'PROFILE_COMPANY', companyName: com })
+  window.location.href = '/ProfileNumEmployee'
+}
+export const numEmployeeFill = com => dispatch => {
+  dispatch({ type: 'PROFILE_NUMEMPLOY', companyEmploy: com })
+  window.location.href = '/List'
+}
+
 export const signup = ({ email, password }) => dispatch => {
   dispatch({ type: types.SIGNUP_REQUEST })
   post({

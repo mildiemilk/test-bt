@@ -70,7 +70,10 @@
     "react-router-dom": "^4.1.1",
     "react-sc": "^0.2.1",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "semantic-ui": "^2.2.10",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.69.0"
   },
   "babel": {
     "presets": [

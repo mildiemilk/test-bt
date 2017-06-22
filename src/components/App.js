@@ -7,7 +7,9 @@ import Async from 'react-code-splitting'
 import Login from './Auth/Login'
 import Signup from './Auth/Signup'
 import Header from './Header'
-import about from './about'
+import ProfileCompany from './Auth/ProfileCompany'
+import ProfileNumEmployee from './Auth/ProfileNumEmployee'
+import ProfileList from './Auth/ProfileList'
 import Nav from './Header/Nav'
 import { Body } from './Styled'
 
@@ -19,7 +21,9 @@ const App = ({ user }) => (
 
     <Switch>
       <Route path="/signup" component={Signup} />
-      <Route path="/about" component={about} />
+      <Route path="/ProfileCompany" component={ProfileCompany} />
+      <Route path="/ProfileNumEmployee" component={ProfileNumEmployee} />
+      <Route path="/list" component={ProfileList} />
       <Route path="/login" component={Login} />
       {user.token
         ? <Route path="/" component={Home} />
