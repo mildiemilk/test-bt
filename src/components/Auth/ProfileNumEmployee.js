@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { numEmployeeFill } from '../../actions'
 import { Button } from 'semantic-ui-react'
+
 class ProfileNumEmployee extends Component {
   constructor() {
     super()
@@ -36,7 +37,8 @@ class ProfileNumEmployee extends Component {
         <button type="button" onClick={() => this.numEmployHandler()}>
           Next
         </button>
-        <a href="/ProfileCompany">Back</a>
+        {/*<a href="/ProfileCompany">Back</a>*/}
+        <Button>click</Button>
       </div>
     )
   }

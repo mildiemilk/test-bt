@@ -60,7 +60,11 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
     "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
     "offline-plugin": "^4.7.0",
     "react": "next",
     "react-bootstrap": "^0.31.0",
@@ -71,9 +75,11 @@
     "react-sc": "^0.2.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
     "semantic-ui": "^2.2.10",
     "semantic-ui-css": "^2.2.10",
-    "semantic-ui-react": "^0.69.0"
+    "semantic-ui-react": "^0.69.0",
+    "style-loader": "^0.18.2"
   },
   "babel": {
     "presets": [

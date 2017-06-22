@@ -12,6 +12,7 @@ import ProfileNumEmployee from './Auth/ProfileNumEmployee'
 import ProfileList from './Auth/ProfileList'
 import Nav from './Header/Nav'
 import { Body } from './Styled'
+import 'semantic-ui-css/semantic.min.css'
 
 const Home = () => <Async load={import('./Home')} />
 

@@ -29,6 +29,18 @@ module.exports = {
         include: [resolve(__dirname, '../src'), resolve(__dirname)],
         use: 'babel-loader',
       },
+      {
+        test: /\.(css|scss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader?name=images/[name].[ext]',
+      },
+      {
+        test: /\.(otf|eot|woff|woff2|ttf|svg)(\?.+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]',
+      },
     ],
   },
   plugins: [
