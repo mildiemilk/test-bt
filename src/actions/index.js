@@ -31,6 +31,8 @@ export const signup = ({ email, password }) => dispatch => {
     success: types.SIGNUP_SUCCESS,
     failure: types.SIGNUP_FAILURE,
     dispatch,
+  }).then(response => {
+    window.location.href = '/login'
   })
 }
 

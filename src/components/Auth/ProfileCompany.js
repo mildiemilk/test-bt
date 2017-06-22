@@ -8,22 +8,24 @@ import { companyFill } from '../../actions'
 class ProfileCompany extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      nameInput: '',
+    }
   }
   companyHandler() {
     const { companyFill } = this.props
-    companyFill(this.nameInput.value)
-    console.log('company handler', this.nameInput.value)
+    companyFill(this.state.nameInput)
+    console.log('company handler', this.state.nameInput)
   }
-
+  onInputChange(e) {
+    this.setState({ nameInput: e.target.value })
+  }
   render() {
     return (
       <div>
         Company name
         <input
-          ref={i => {
-            this.nameInput = i
-          }}
+          onChange={e => this.onInputChange(e)}
           placeholder="Company"
           title="Enter your Company"
           defaultValue={this.props.profile.companyName}

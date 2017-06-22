@@ -4,17 +4,22 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { numEmployeeFill } from '../../actions'
-
+import { Button } from 'semantic-ui-react'
 class ProfileNumEmployee extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      numInput: '',
+    }
   }
 
   numEmployHandler() {
     const { numEmployeeFill } = this.props
-    numEmployeeFill(this.numInput.value)
-    console.log('company handler', this.numInput.value)
+    numEmployeeFill(this.state.numInput)
+    console.log('company handler', this.state.numInput)
+  }
+  onInputChange(e) {
+    this.setState({ numInput: e.target.value })
   }
 
   render() {
@@ -22,9 +27,7 @@ class ProfileNumEmployee extends Component {
       <div>
         Number of Employees
         <input
-          ref={i => {
-            this.numInput = i
-          }}
+          onChange={e => this.onInputChange(e)}
           placeholder="Employee"
           title="Enter your Company"
           defaultValue={this.props.profile.companyEmploy}
@@ -33,6 +36,7 @@ class ProfileNumEmployee extends Component {
         <button type="button" onClick={() => this.numEmployHandler()}>
           Next
         </button>
+        <a href="/ProfileCompany">Back</a>
       </div>
     )
   }
