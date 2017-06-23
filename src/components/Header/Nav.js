@@ -6,8 +6,8 @@ class Nav extends React.Component {
     return (
       <div>
         <nav>
-          <Link to={{ pathname: '/login' }}>LogIn</Link>
-          <Link to={{ pathname: '/ProfileCompany' }}>Profile</Link>
+          <Link to={{ pathname: '/login' }}>HOME</Link>
+
         </nav>
       </div>
     )

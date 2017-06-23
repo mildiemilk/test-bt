@@ -6,7 +6,7 @@ import Nav from './Nav'
 const Header = () => (
   <div>
     <Nav />
-    <Title>Benefitable</Title>
+
   </div>
 )
 

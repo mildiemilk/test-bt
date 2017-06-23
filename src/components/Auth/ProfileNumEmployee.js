@@ -34,11 +34,16 @@ class ProfileNumEmployee extends Component {
           defaultValue={this.props.profile.companyEmploy}
           required
         />
-        <button type="button" onClick={() => this.numEmployHandler()}>
-          Next
-        </button>
-        {/*<a href="/ProfileCompany">Back</a>*/}
-        <Button>click</Button>
+        <Link
+          to={{ pathname: '/list' }}
+          className="ui button"
+          onClick={() => this.numEmployHandler()}
+        >
+          Submit
+        </Link>
+        <Link to={{ pathname: '/ProfileCompany' }} className="ui button">
+          Back
+        </Link>
       </div>
     )
   }

@@ -16,11 +16,9 @@ export const companyDiscount = cCount => dispatch => {
 
 export const companyFill = com => dispatch => {
   dispatch({ type: 'PROFILE_COMPANY', companyName: com })
-  window.location.href = '/ProfileNumEmployee'
 }
-export const numEmployeeFill = com => dispatch => {
-  dispatch({ type: 'PROFILE_NUMEMPLOY', companyEmploy: com })
-  window.location.href = '/List'
+export const numEmployeeFill = num => dispatch => {
+  dispatch({ type: 'PROFILE_NUMEMPLOY', companyEmploy: num })
 }
 
 export const signup = ({ email, password }) => dispatch => {

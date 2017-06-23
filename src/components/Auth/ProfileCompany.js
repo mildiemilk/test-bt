@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { companyFill } from '../../actions'
+import { Button, Checkbox, Form, Grid } from 'semantic-ui-react'
+import { Text, Box, Border } from '../Styled'
 
 class ProfileCompany extends Component {
   constructor() {
@@ -22,19 +24,122 @@ class ProfileCompany extends Component {
   }
   render() {
     return (
-      <div>
-        Company name
-        <input
-          onChange={e => this.onInputChange(e)}
-          placeholder="Company"
-          title="Enter your Company"
-          defaultValue={this.props.profile.companyName}
-          required
-        />
-
-        <button type="submit" onClick={() => this.companyHandler()}>
+      <div style={{ marginTop: '20px' }}>
+        <h2>Setting Profile<br /></h2>
+        <Grid>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Company Name</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Type of Business</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row style={{ padding: '4px' }}>
+            <Grid.Column width={4}>
+              <Text>Company Address</Text>
+            </Grid.Column>
+            <Grid.Column width={2}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Total Employee</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Company Tel.</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Broker Name</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row centered style={{ padding: '4px' }}>
+            <Grid.Column width={3}>
+              <Text>Insurer Name</Text>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Box
+                size="small"
+                onChange={e => this.onInputChange(e)}
+                placeholder="Company"
+                title="Enter your Company"
+                defaultValue={this.props.profile.companyName}
+                required
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        <Link
+          to={{ pathname: '/ProfileNumEmployee' }}
+          className="ui button"
+          onClick={() => this.companyHandler()}
+        >
           Next
-        </button>
+        </Link>
       </div>
     )
   }

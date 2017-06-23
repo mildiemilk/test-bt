@@ -12,7 +12,7 @@ class ProfileList extends Component {
   }
 
   render() {
-    console.log(this.props.profile.companyName)
+    console.log(this.props)
     return (
       <div>
         Show List
